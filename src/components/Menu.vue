@@ -21,13 +21,12 @@
 
 <script>
 import { routes } from "../router";
-console.log(routes);
 export default {
   name: "Menu",
   props: ["showMenu"],
   data() {
     return {
-      menuModel: false,
+      menuModel: true,
       items: routes,
       right: null,
     };
@@ -41,4 +40,7 @@ export default {
 </script>
 
 <style>
+.v-navigation-drawer__content {
+  margin-top:50px
+}
 </style>

@@ -2,7 +2,6 @@ const ModuleFederationPlugin = require("webpack").container
   .ModuleFederationPlugin;
 const dependencies = require("./package.json").dependencies;
 
-console.log();
 
 module.exports = {
   publicPath: process.env.PUBLIC_PATH,
@@ -12,7 +11,9 @@ module.exports = {
       new ModuleFederationPlugin({
         name: "root",
         filename: "remoteEntry.js",
-        exposes: {},
+        exposes: {
+          "./store": "./src/store/index",
+        },
         remotes: {
           cart: process.env.REMOTE_CART,
           products: process.env.REMOTE_PRODUCTS,
