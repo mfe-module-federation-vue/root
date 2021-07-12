@@ -21,7 +21,6 @@
 
 <script>
 import { routes } from "../router";
-console.log(routes);
 export default {
   name: "Menu",
   props: ["showMenu"],

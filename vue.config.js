@@ -2,8 +2,6 @@ const ModuleFederationPlugin = require("webpack").container
   .ModuleFederationPlugin;
 const dependencies = require("./package.json").dependencies;
 
-console.log();
-
 module.exports = {
   publicPath: process.env.PUBLIC_PATH,
   transpileDependencies: ["vuetify"],
