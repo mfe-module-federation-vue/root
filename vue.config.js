@@ -10,7 +10,9 @@ module.exports = {
       new ModuleFederationPlugin({
         name: "root",
         filename: "remoteEntry.js",
-        exposes: {},
+        exposes: {
+          "./store": "./src/store",
+        },
         remotes: {
           cart: process.env.REMOTE_CART,
           products: process.env.REMOTE_PRODUCTS,

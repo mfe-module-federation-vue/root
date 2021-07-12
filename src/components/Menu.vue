@@ -1,12 +1,7 @@
 <template>
   <v-navigation-drawer app v-model="menuModel" absolute clipped>
     <v-list nav>
-      <v-list-item
-        v-for="item in items"
-        :key="item.title"
-        link
-        :to="item.path"
-      >
+      <v-list-item v-for="item in items" :key="item.title" link :to="item.path">
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
         </v-list-item-icon>
@@ -26,7 +21,7 @@ export default {
   props: ["showMenu"],
   data() {
     return {
-      menuModel: false,
+      menuModel: true,
       items: routes,
       right: null,
     };
@@ -40,4 +35,7 @@ export default {
 </script>
 
 <style>
+.v-navigation-drawer__content {
+  margin-top: 50px;
+}
 </style>
