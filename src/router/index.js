@@ -1,13 +1,18 @@
 import VueRouter from "vue-router";
 
 const Cart = () => import("cart/Cart");
-const Profile = () => import("profile/Profile");
 const Products = () => import("products/Products");
+import remoteProfileRoutes from "profile/routes";
 
-const routes = [
-  { path: "/cart", component: Cart },
-  { path: "/products", component: Products },
-  { path: "/profile", component: Profile },
+export const routes = [
+  { path: "/cart", title: "Cart", icon: "mdi-cart", component: Cart },
+  {
+    path: "/products",
+    title: "Products",
+    icon: "mdi-tag-heart",
+    component: Products,
+  },
+  ...remoteProfileRoutes,
 ];
 
 const router = new VueRouter({

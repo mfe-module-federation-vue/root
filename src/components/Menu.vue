@@ -1,11 +1,11 @@
 <template>
-  <v-navigation-drawer app v-model="showMenu" absolute clipped>
+  <v-navigation-drawer app v-model="menuModel" absolute clipped>
     <v-list nav>
       <v-list-item
         v-for="item in items"
         :key="item.title"
         link
-        :to="item.route"
+        :to="item.path"
       >
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
@@ -20,18 +20,22 @@
 </template>
 
 <script>
+import { routes } from "../router";
+console.log(routes);
 export default {
   name: "Menu",
   props: ["showMenu"],
   data() {
     return {
-      items: [
-        { title: "Products", icon: "mdi-tag-heart", route: "/products" },
-        { title: "Cart", icon: "mdi-cart", route: "/cart" },
-        { title: "My Account", icon: "mdi-account", route: "/profile" },
-      ],
+      menuModel: false,
+      items: routes,
       right: null,
     };
+  },
+  watch: {
+    showMenu() {
+      this.menuModel = this.showMenu;
+    },
   },
 };
 </script>
