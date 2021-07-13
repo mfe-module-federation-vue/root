@@ -17,6 +17,7 @@ module.exports = {
           cart: process.env.REMOTE_CART,
           products: process.env.REMOTE_PRODUCTS,
           profile: process.env.REMOTE_PROFILE,
+          root: process.env.REMOTE_ROOT
         },
         shared: dependencies,
       }),
