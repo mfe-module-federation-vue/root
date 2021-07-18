@@ -11,6 +11,7 @@ module.exports = {
         name: "root",
         filename: "remoteEntry.js",
         exposes: {
+          "./userModuleFromRoot": "./src/userModuleFromRoot",
           "./store": "./src/store",
         },
         remotes: {

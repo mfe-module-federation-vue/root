@@ -1,6 +1,7 @@
 import Vue from "vue";
 
 import Vuex from "vuex";
+import userModuleFromRoot from './userModuleFromRoot'
 Vue.use(Vuex);
 
 const cartModule = {
@@ -29,29 +30,10 @@ const cartModule = {
   },
 };
 
-const userModule = {
-  namespaced: true,
-  state: {
-    user: null,
-  },
-  mutations: {
-    SET_USER(state, user) {
-      state.user = user;
-    },
-  },
-  actions: {
-    setUser(context, user) {
-      context.commit("SET_USER", user);
-    },
-  },
-  getters: {
-    user: (state) => state.user,
-  },
-};
 const store = new Vuex.Store({
   modules: {
     cart: cartModule,
-    user: userModule,
+    user: userModuleFromRoot,
   },
 });
 
