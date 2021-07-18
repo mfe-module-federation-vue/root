@@ -1,4 +1,4 @@
-export const userModule = {
+export default {
   namespaced: true,
   state: {
     user: null,
