@@ -4,13 +4,21 @@ import vuetify from "./plugins/vuetify";
 import VueRouter from "vue-router";
 import router from "./router";
 import store from "./store";
+import userConfig from './helper-modules/user.module'
+
 
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
 
-new Vue({
-  vuetify,
-  router,
-  store,
-  render: (h) => h(App),
-}).$mount("#app");
+const initApp = async () => {
+  await userConfig.getUser() // Requesting once
+
+  new Vue({
+    router,
+    store,
+    vuetify,
+    render: (h) => h(App),
+  }).$mount('#app')
+}
+
+initApp()
