@@ -12,13 +12,14 @@ module.exports = {
         filename: "remoteEntry.js",
         exposes: {
           "./userModuleFromRoot": "./src/userModuleFromRoot",
+          "./userModuleFromRootByHelper": "./src/helper-modules/user.module",
           "./store": "./src/store",
         },
         remotes: {
           cart: process.env.REMOTE_CART,
           products: process.env.REMOTE_PRODUCTS,
           profile: process.env.REMOTE_PROFILE,
-          root: process.env.REMOTE_ROOT
+          root: process.env.REMOTE_ROOT,
         },
         shared: dependencies,
       }),
