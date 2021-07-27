@@ -10,16 +10,16 @@ module.exports = {
       new ModuleFederationPlugin({
         name: "root",
         filename: "remoteEntry.js",
-        exposes: {
-          "./userModuleFromRoot": "./src/userModuleFromRoot",
-          "./userModuleFromRootByHelper": "./src/helper-modules/user.module",
-          "./store": "./src/store",
-        },
+        // exposes: {
+        //   "./userModuleFromRoot": "./src/userModuleFromRoot",
+        //   "./userModuleFromRootByHelper": "./src/helper-modules/user.module",
+        //   "./store": "./src/store",
+        // },
         remotes: {
           cart: process.env.REMOTE_CART,
           products: process.env.REMOTE_PRODUCTS,
           profile: process.env.REMOTE_PROFILE,
-          root: process.env.REMOTE_ROOT,
+          store: process.env.REMOTE_STORE,
         },
         shared: dependencies,
       }),

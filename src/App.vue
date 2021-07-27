@@ -30,10 +30,6 @@ export default {
       { title: "About", icon: "mdi-help-box" },
     ],
   }),
-  mounted() {
-    console.log("root", this.$store);
-    this.$store.dispatch("user/setUser", { usuario: "teste" });
-  },
   methods: {
     changeMenuState() {
       this.drawer = !this.drawer;
