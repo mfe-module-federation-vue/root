@@ -12,6 +12,7 @@
 import Navbar from "./components/Navbar.vue";
 import Menu from "./components/Menu.vue";
 import Main from "./components/Main.vue";
+import emitters from "store/emitters";
 
 export default {
   name: "App",
@@ -31,8 +32,15 @@ export default {
     ],
   }),
   mounted() {
-    console.log("root", this.$store);
+    // console.log("root", this.$store);
     this.$store.dispatch("user/setUser", { usuario: "teste" });
+    console.log("mounted - root");
+    emitters.helpers.listen(emitters.EVENT_KEYS.USER, () =>
+      console.log(
+        "listen - called from root: ",
+        (this.user = emitters.helpers.userData().name.first)
+      )
+    );
   },
   methods: {
     changeMenuState() {
