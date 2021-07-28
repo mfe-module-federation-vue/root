@@ -33,7 +33,6 @@ export default {
     };
   },
   mounted() {
-    console.log("mounted - root");
     emitters.helpers.listen(emitters.EVENT_KEYS.USER, () =>
       console.log(
         "listen - root Menu - called from root: ",
