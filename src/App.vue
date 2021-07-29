@@ -31,8 +31,9 @@ export default {
     ],
   }),
   mounted() {
-    console.log("root", this.$store);
+    // console.log("root", this.$store);
     this.$store.dispatch("user/setUser", { usuario: "teste" });
+    console.log("mounted - App.vue - root");
   },
   methods: {
     changeMenuState() {
