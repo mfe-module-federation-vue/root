@@ -35,7 +35,8 @@ export default {
   mounted() {
     emitters.helpers.listen(emitters.EVENT_KEYS.USER, () =>
       console.log(
-        "listen - root Menu - called from root: ",
+        "%c listen - root Menu - called from root: ",
+        "color: #bada55;",
         (this.user = emitters.helpers.userData().name.first)
       )
     );

@@ -7,6 +7,15 @@ import store from "./store";
 import userConfig from "./helper-modules/user.module";
 import emitters from "store/emitters";
 
+const FeatFlag = Vue.extend({
+  computed: {
+    $mode() {
+      return "Mode";
+    },
+  },
+});
+Vue.mixin(FeatFlag);
+
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
 

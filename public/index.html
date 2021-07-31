@@ -8,12 +8,27 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNWHZ7P8QC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-ZNWHZ7P8QC');
+      gtag('event', 'root - action', {
+  'event_category': '<category>',
+  'event_label':' <label>',
+  'value': '<value>'
+});
+    </script>
   </head>
   <body>
+
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+
 </html>
