@@ -10,35 +10,23 @@
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item-content>
-        <v-list-item-title>{{ user }}</v-list-item-title>
-      </v-list-item-content>
+      <v-list-item-content> </v-list-item-content>
     </v-list>
   </v-navigation-drawer>
 </template>
 
 <script>
 import { routes } from "../router";
-import emitters from "store/emitters";
 
 export default {
   name: "Menu",
   props: ["showMenu"],
   data() {
     return {
-      user: emitters.helpers.userData().name.first,
       menuModel: true,
       items: routes,
       right: null,
     };
-  },
-  mounted() {
-    emitters.helpers.listen(emitters.EVENT_KEYS.USER, () =>
-      console.log(
-        "listen - root Menu - called from root: ",
-        (this.user = emitters.helpers.userData().name.first)
-      )
-    );
   },
   watch: {
     showMenu() {
