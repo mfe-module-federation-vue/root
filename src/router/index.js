@@ -2,6 +2,7 @@ import VueRouter from "vue-router";
 
 const Cart = () => import("cart/Cart");
 const Products = () => import("products/Products");
+const Sign = () => import("sign/Sign");
 import remoteProfileRoutes from "profile/routes";
 
 export const routes = [
@@ -11,6 +12,11 @@ export const routes = [
     title: "Products",
     icon: "mdi-tag-heart",
     component: Products,
+  },
+  {
+    path: "/sign",
+    title: "Sign",
+    component: Sign,
   },
   ...remoteProfileRoutes,
 ];
