@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       menuModel: true,
-      items: routes,
+      items: routes.filter((route) => route.path !== "/login"),
       right: null,
     };
   },

@@ -4,7 +4,8 @@
     <v-toolbar-title>Title</v-toolbar-title>
 
     <v-spacer></v-spacer>
-    <div>HI, {{ user.name.first }}</div>
+    <div>HI, {{ user.name.last }}</div>
+    <Logout class="ml-2" />
     <v-menu
       absolute
       offset-y
@@ -22,23 +23,26 @@
 
 <script>
 const Profile = () => import("profile/Profile");
-import emitters from "store/emitters";
+const Logout = () => import("auth/Logout");
+
+import { dealful } from "../remotes/dealful";
+import UserTools from "auth/UserTools";
 
 export default {
   name: "Navbar",
-  data: () => ({ drawer: null, user: emitters.helpers.userData() }),
-  components: { Profile },
+  data: () => ({ drawer: null, user: UserTools.storage.userData() }),
+  components: { Profile, Logout },
   methods: {
     menuToggle() {
       this.$emit("menuToggle");
     },
   },
   mounted() {
-    emitters.helpers.listen(emitters.EVENT_KEYS.USER, () =>
+    dealful.helpers.listen(dealful.EVENT_KEYS.USER, () =>
       console.log(
         "%c listen - root Menu - called from root: ",
         "color: #bada55;",
-        (this.user = emitters.helpers.userData())
+        (this.user = UserTools.storage.userData())
       )
     );
   },

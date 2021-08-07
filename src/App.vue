@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <Navbar @menuToggle="changeMenuState" />
-
-    <Menu :showMenu="drawer" />
+    <v-app-bar v-if="$route.path === '/login'" app color="primary" dark />
+    <Navbar v-else @menuToggle="changeMenuState" />
+    <Menu v-if="$route.path !== '/login'" :showMenu="drawer" />
 
     <Main />
   </v-app>
@@ -23,7 +23,7 @@ export default {
   },
 
   data: () => ({
-    drawer: true,
+    drawer: false,
     items: [
       { title: "Dashboard", icon: "mdi-view-dashboard" },
       { title: "Photos", icon: "mdi-image" },
