@@ -10,7 +10,6 @@
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item-content> </v-list-item-content>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -24,7 +23,7 @@ export default {
   data() {
     return {
       menuModel: true,
-      items: routes,
+      items: routes.filter((route) => route.path !== "/login"),
       right: null,
     };
   },

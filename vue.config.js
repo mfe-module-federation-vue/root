@@ -20,6 +20,7 @@ module.exports = {
           products: process.env.REMOTE_PRODUCTS,
           profile: process.env.REMOTE_PROFILE,
           root: process.env.REMOTE_ROOT,
+          auth: process.env.REMOTE_AUTH,
           store: process.env.REMOTE_STORE,
         },
         shared: dependencies,
