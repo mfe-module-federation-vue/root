@@ -947,6 +947,13 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
+"@mfe-module-federation-vue/dealful-package@^0.0.1":
+  version "0.0.1"
+  resolved "https://npm.pkg.github.com/download/@mfe-module-federation-vue/dealful-package/0.0.1/961f46d4300c5830003f84167bc4feb181dceef9b2f8ebed432514560aca1cd2#00b6799565e384fc85b2994a76d51033355e8bcc"
+  integrity sha512-dy2CrveB8Qb5AZFEDR5KIPWwvm+dDCm/PNCEEEUNEbwhxgZhhhDXscDrsLCjv7XDISi1p908xwkAfXHM/UL+eQ==
+  dependencies:
+    nanoevents "^6.0.0"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -5667,6 +5674,11 @@ nan@^2.12.1:
   version "2.14.2"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.2.tgz#f5376400695168f4cc694ac9393d0c9585eeea19"
   integrity sha512-M2ufzIiINKCuDfBSAUr1vWQ+vuVcA9kqx8JJUsbQi6yf1uGRyb7HfpdfUr5qLXf3B/t8dPvcjhKMmlfnP47EzQ==
+
+nanoevents@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/nanoevents/-/nanoevents-6.0.0.tgz#82454023f448a1eab0df103df59d5813ac16035b"
+  integrity sha512-0ASElaiZR21yBjhmBiRboCXeNirfIVuiKIxikn6a3H/9zUL+q2HBq+4B3Cb2UdCctoGx5YSwxTXypslD/olJKA==
 
 nanoid@^3.1.23:
   version "3.1.23"

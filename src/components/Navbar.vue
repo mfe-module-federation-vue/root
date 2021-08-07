@@ -38,13 +38,13 @@ export default {
     },
   },
   mounted() {
-    dealful.helpers.listen(dealful.EVENT_KEYS.USER, () =>
+    dealful.emitter.on(dealful.EVENT_KEYS.CHANGE_USER, (newUserData) => {
       console.log(
         "%c listen - root Menu - called from root: ",
-        "color: #bada55;",
-        (this.user = UserTools.storage.userData())
-      )
-    );
+        "color: #bada55;"
+      );
+      this.user = newUserData();
+    });
   },
 };
 </script>
