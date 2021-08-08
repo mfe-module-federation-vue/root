@@ -4,7 +4,7 @@ const Cart = () => import("cart/Cart");
 const Products = () => import("products/Products");
 const Login = () => import("auth/Login");
 import remoteProfileRoutes from "profile/routes";
-import { dealful } from "../remotes/dealful";
+import { STORAGE_KEYS } from "../remotes/dealful";
 
 export const routes = [
   {
@@ -28,7 +28,7 @@ const router = new VueRouter({
 });
 
 async function beforeResolve(to, from, next) {
-  const hasToken = localStorage.getItem(dealful.STORAGE_KEYS.TOKEN);
+  const hasToken = localStorage.getItem(STORAGE_KEYS.TOKEN);
   const noAuth = !hasToken && to.path !== "/login";
   noAuth ? next({ name: "Login" }) : next();
 }

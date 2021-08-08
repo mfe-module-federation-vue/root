@@ -25,7 +25,7 @@
 const Profile = () => import("profile/Profile");
 const Logout = () => import("auth/Logout");
 
-import { dealful } from "../remotes/dealful";
+import { emitter, EVENT_KEYS } from "../remotes/dealful";
 import UserTools from "auth/UserTools";
 
 export default {
@@ -38,7 +38,7 @@ export default {
     },
   },
   mounted() {
-    dealful.emitter.on(dealful.EVENT_KEYS.CHANGE_USER, (newUserData) => {
+    emitter.on(EVENT_KEYS.CHANGE_USER, (newUserData) => {
       console.log(
         "%c listen - root Menu - called from root: ",
         "color: #bada55;"
