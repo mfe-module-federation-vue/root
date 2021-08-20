@@ -25,12 +25,11 @@
 const Profile = () => import("profile/Profile");
 const Logout = () => import("auth/Logout");
 
-import { emitter, EVENT_KEYS } from "../remotes/dealful";
-import UserTools from "auth/UserTools";
+import { emitter, EVENT_KEYS, userData } from "../dealful";
 
 export default {
   name: "Navbar",
-  data: () => ({ drawer: null, user: UserTools.storage.userData() }),
+  data: () => ({ drawer: null, user: userData() }),
   components: { Profile, Logout },
   methods: {
     menuToggle() {

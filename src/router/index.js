@@ -4,7 +4,7 @@ const Cart = () => import("cart/Cart");
 const Products = () => import("products/Products");
 const Login = () => import("auth/Login");
 import remoteProfileRoutes from "profile/routes";
-import { STORAGE_KEYS } from "../remotes/dealful";
+import { STORAGE_KEYS } from "../dealful";
 
 export const routes = [
   {
