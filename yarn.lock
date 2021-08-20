@@ -947,10 +947,10 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@mfe-module-federation-vue/dealful-package@^0.0.1":
-  version "0.0.1"
-  resolved "https://npm.pkg.github.com/download/@mfe-module-federation-vue/dealful-package/0.0.1/961f46d4300c5830003f84167bc4feb181dceef9b2f8ebed432514560aca1cd2#00b6799565e384fc85b2994a76d51033355e8bcc"
-  integrity sha512-dy2CrveB8Qb5AZFEDR5KIPWwvm+dDCm/PNCEEEUNEbwhxgZhhhDXscDrsLCjv7XDISi1p908xwkAfXHM/UL+eQ==
+"@mfe-module-federation-vue/dealful-package@^0.0.2":
+  version "0.0.2"
+  resolved "https://npm.pkg.github.com/download/@mfe-module-federation-vue/dealful-package/0.0.2/f9428520b663f61da550a4bacdd0551f96fcd7f82db45f9540c894772e51d129#dc111f76e428d13c007541f131783706393e796a"
+  integrity sha512-Yhuw/ApOGnuzpjUBV0Tp+hRQQsKa7DZ2Q98T2QEa8fT6rRo01TTHj0QC971OqVmtNFRjekQBa+f9C/yhqxRRMg==
   dependencies:
     nanoevents "^6.0.0"
 
