@@ -23,7 +23,6 @@ module.exports = {
           auth: process.env.REMOTE_AUTH,
           store: process.env.REMOTE_STORE,
           ds: process.env.REMOTE_DS,
-
         },
         shared: dependencies,
       }),

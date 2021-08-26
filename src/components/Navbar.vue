@@ -25,12 +25,11 @@
 const Profile = () => import("profile/Profile");
 const Logout = () => import("auth/Logout");
 
-import { dealful } from "../remotes/dealful";
-import UserTools from "auth/UserTools";
+import { emitter, EVENT_KEYS, userData } from "../dealful";
 
 export default {
   name: "Navbar",
-  data: () => ({ drawer: null, user: UserTools.storage.userData() }),
+  data: () => ({ drawer: null, user: userData() }),
   components: { Profile, Logout },
   methods: {
     menuToggle() {
@@ -38,13 +37,13 @@ export default {
     },
   },
   mounted() {
-    dealful.helpers.listen(dealful.EVENT_KEYS.USER, () =>
+    emitter.on(EVENT_KEYS.CHANGE_USER, (newUserData) => {
       console.log(
         "%c listen - root Menu - called from root: ",
-        "color: #bada55;",
-        (this.user = UserTools.storage.userData())
-      )
-    );
+        "color: #bada55;"
+      );
+      this.user = newUserData();
+    });
   },
 };
 </script>
