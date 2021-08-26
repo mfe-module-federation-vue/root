@@ -13,7 +13,6 @@ module.exports = {
         exposes: {
           "./userModuleFromRoot": "./src/userModuleFromRoot",
           "./userModuleFromRootByHelper": "./src/helper-modules/user.module",
-          "./store": "./src/store",
         },
         remotes: {
           cart: process.env.REMOTE_CART,
@@ -21,7 +20,6 @@ module.exports = {
           profile: process.env.REMOTE_PROFILE,
           root: process.env.REMOTE_ROOT,
           auth: process.env.REMOTE_AUTH,
-          store: process.env.REMOTE_STORE,
           ds: process.env.REMOTE_DS,
         },
         shared: dependencies,

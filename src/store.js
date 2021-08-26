@@ -1,7 +1,6 @@
 import Vue from "vue";
 
 import Vuex from "vuex";
-import userModuleFromRoot from './userModuleFromRoot'
 Vue.use(Vuex);
 
 const cartModule = {
@@ -33,7 +32,7 @@ const cartModule = {
 const store = new Vuex.Store({
   modules: {
     cart: cartModule,
-    user: userModuleFromRoot,
+    user: {},
   },
 });
 
