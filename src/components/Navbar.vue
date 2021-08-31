@@ -38,10 +38,6 @@ export default {
   },
   mounted() {
     emitter.on(EVENT_KEYS.CHANGE_USER, (newUserData) => {
-      console.log(
-        "%c listen - root Menu - called from root: ",
-        "color: #bada55;"
-      );
       this.user = newUserData();
     });
   },
