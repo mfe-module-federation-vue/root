@@ -6,6 +6,7 @@
     <v-spacer></v-spacer>
     <div>HI, {{ user.name.last }}</div>
     <Logout class="ml-2" />
+    <CartIcon />
     <v-menu
       absolute
       offset-y
@@ -24,13 +25,14 @@
 <script>
 const Profile = () => import("profile/Profile");
 const Logout = () => import("auth/Logout");
+const CartIcon = () => import("cart/CartIcon");
 
 import { emitter, EVENT_KEYS, userData } from "../dealful";
 
 export default {
   name: "Navbar",
   data: () => ({ drawer: null, user: userData() }),
-  components: { Profile, Logout },
+  components: { Profile, Logout , CartIcon },
   methods: {
     menuToggle() {
       this.$emit("menuToggle");
