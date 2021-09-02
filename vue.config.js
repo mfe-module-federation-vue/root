@@ -28,7 +28,6 @@ module.exports = {
           "@mfe-module-federation-vue/dealful-package": {
             requiredVersion:
               dependencies["@mfe-module-federation-vue/dealful-package"],
-            singleton: true,
           },
         },
       }),
