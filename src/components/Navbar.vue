@@ -27,12 +27,13 @@ const Profile = () => import("profile/Profile");
 const Logout = () => import("auth/Logout");
 const CartIcon = () => import("cart/CartIcon");
 
-import { emitter, EVENT_KEYS, userData } from "../dealful";
+import { emitter, EVENT_KEYS } from "../dealful";
+import { userData } from "../services/storage";
 
 export default {
   name: "Navbar",
   data: () => ({ drawer: null, user: userData() }),
-  components: { Profile, Logout , CartIcon },
+  components: { Profile, Logout, CartIcon },
   methods: {
     menuToggle() {
       this.$emit("menuToggle");
