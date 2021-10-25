@@ -19,6 +19,7 @@ module.exports = {
           ds: process.env.REMOTE_DS,
         },
         shared: {
+          ...dependencies,
           vuetify: {
             singleton: true,
           },
@@ -35,6 +36,6 @@ module.exports = {
   },
   devServer: {
     port: 3000,
-    progress: false,
+    
   },
 };
